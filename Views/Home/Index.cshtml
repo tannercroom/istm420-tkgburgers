@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $(".indexphoto1").hover(function(){
+            $(this).attr('src', '@Url.Content("~/images/chicken.jpeg")' );
+        }, function(){
+          $(this).attr('src', '@Url.Content("~/images/anotherburger.jpeg")');
+        });
+        $(".indexphoto2").hover(function(){
+            $(this).attr('src', '@Url.Content("~/images/outside.jpeg")' );
+        }, function(){
+            $(this).attr('src', '@Url.Content("~/images/restaurant.jpg")');
+        });
+        $(".indexphoto3").hover(function(){
+        $(this).attr('src', '@Url.Content("~/images/indexfries.jpg")' );
+        }, function(){
+            $(this).attr('src', '@Url.Content("~/images/cookieindex.jpg")');
+        });
+        });
+    </script>
+</head>
+<body>
+    <h1>@ViewData["Title"]</h1>
+    <div class="text-center">
+
+        <div class="row">
+            <div class="column">
+                <img class="indexphoto1" src="~/images/anotherburger.jpeg" alt="burger" style="width:80%" />
+                <br />
+                <a class="linkies" asp-controller="Product" asp-action="Order">Order Online</a>
+            </div>
+            <div class="column">
+                <img class="indexphoto2" src="~/images/restaurant.jpg" alt="restaurant" style="width:80%" />
+                <br />
+                <a class="linkies" asp-controller="Home" asp-action="About">About Us</a>
+            </div>
+            <div class="column">
+                <img class="indexphoto3" src="~/images/cookieindex.jpg" alt="cookie" style="width:80%" />
+                <br />
+                <a class="linkies" asp-controller="Home" asp-action="Contact">Contact Us</a>
+            </div>
+
+            <hr />
+
+            <div id="AggiePride">
+                <h1 class="lefth">Aggie Pride</h1>
+                <br />
+                <p class="leftp">
+                    As former students, we want to do all we can to give back to current students. We believe in Aggies supporting Aggies and helping the community that supported
+                    us throughout our college years. At TKG Burgers, we continue to uphold Aggie Core Values and serve food that makes us proud to say we're Aggies.
+                    <br />
+                    We regularly partner with student organizations, other local businesses, and attend various festivals in town!
+                    <br />
+                    Please don't hesitate to reach out to us!
+                </p>
+            </div>
+
+            <div id="Reviews">
+                <h1 class="righth">Reviews</h1>
+                <br />
+                <blockquote class="wholequote">
+                    <p class="quote">
+                        <i>"The best burgers that I've ever had!"</i>
+                    </p>
+                    <p class="speaker">Jimbo Fisher</p>
+                </blockquote>
+                <br />
+                <br />
+                <blockquote class="wholequote">
+                    <p class="quote">
+                        <i>"The chicken sandwiches are to die for. 10/10 recommend."</i>
+                    </p>
+                    <p class="speaker">Johnny Manziel</p>
+                </blockquote>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>

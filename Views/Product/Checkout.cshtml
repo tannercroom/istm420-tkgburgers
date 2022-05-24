@@ -1,0 +1,107 @@
+﻿@model Checkout
+@{ 
+    ViewData["Title"] = "Checkout";
+}
+<head>
+    <title>@ViewData["Title"] - TKG Burgers</title>
+    <link rel="stylesheet" href="~/css/Checkout.css" />
+</head>
+<body>
+    <div id="page">
+        <div id="top">
+            <h1>Checkout</h1>
+            <h3>Almost there! Please fill out your billing information below:</h3>
+        </div>
+        <div id="orderDetails">
+            <table>
+                <tr>
+                    <th>Subtotal:</th>
+                    <td>@ViewBag.Subtotal.ToString("c2")</td>
+                </tr>
+                <tr>
+                    <th>Tax:</th>
+                    <td>@ViewBag.Tax.ToString("c2")</td>
+                </tr>
+                <tr>
+                    <th>Total:</th>
+                    <th>@ViewBag.Total.ToString("c2")</th>
+                </tr>
+            </table>
+        </div>
+        <div id="billingForm">
+            <form asp-action="Checkout" method="post">
+                <div asp-validation-summary="All"></div>
+                <table>
+                    <tr>
+                        <td><label asp-for="FirstName">First Name: </label></td>
+                        <td><input asp-for="FirstName" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="LastName">Last Name: </label></td>
+                        <td><input asp-for="LastName" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="Street">Street Address: </label></td>
+                        <td><input asp-for="Street" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="Apt">Apt/Suite: </label></td>
+                        <td><input asp-for="Apt" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="City">City: </label></td>
+                        <td><input asp-for="City" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="State">State: </label></td>
+                        <td><input asp-for="State" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="ZIP">ZIP: </label></td>
+                        <td><input asp-for="ZIP" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="Phone">Phone: </label></td>
+                        <td><input asp-for="Phone" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="Email">E-Mail: </label></td>
+                        <td><input asp-for="Email" type="email"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="PaymentType">Payment Type: </label></td>
+                        <td>
+                            <select asp-for="PaymentType">
+                                <option value=""></option>
+                                <option value="1">Credit Card</option>
+                                <option value="2">Debit Card</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="CardholderName">Cardholder Name: </label></td>
+                        <td><input asp-for="CardholderName" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="CardNumber">Card Number: </label></td>
+                        <td><input asp-for="CardNumber" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="CVV">CVV: </label></td>
+                        <td><input asp-for="CVV" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="ExpirationDate">Expiration Date: </label></td>
+                        <td><input asp-for="ExpirationDate" /></td>
+                    </tr>
+                </table>
+                <div id="submitButtons">
+                    <button type="submit" class="submitButton" asp-route-subtotal="@ViewBag.Subtotal">Checkout</button>
+                    <a class="submitButton" asp-controller="Product" asp-action="Checkout" asp-route-subtotal="@ViewBag.Subtotal">Clear</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+

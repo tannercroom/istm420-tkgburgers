@@ -1,0 +1,60 @@
+﻿@model List<Product> 
+@{
+    ViewData["Title"] = "Order";
+}
+
+<head>
+    <title>@ViewData["Title"] - TKG Burgers</title>
+    <link rel="stylesheet" href="~/css/Order.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                $('.add').click(function () {
+                    alert("Item has been added to cart");
+                });
+            }
+        )
+    </script>
+</head>
+<body>
+    <div id="page">
+        <h1>Full Menu</h1>
+        <div id="viewButton">
+            <a class="ViewCartButton" asp-controller="Product" asp-action="Cart">View Cart</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Item</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Add to Cart</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Product in Model)
+                {
+                    <tr>
+                        <td>@Product.ProductID</td>
+                        <td><img src="~/images/@Product.ProductPhoto" width="200" /> </td>
+                        <td>@Product.ProductName</td>
+                        <td>@Product.ProductType</td>
+                        <td>@Product.ProductDescription</td>
+                        <td>@Product.ProductPrice.ToString("c2")</td>
+                        <td>
+                            <a class="add" asp-controller="Product" asp-action="Add"
+                               asp-route-photo="@Product.ProductPhoto"
+                               asp-route-name="@Product.ProductName"
+                               asp-route-price="@Product.ProductPrice">Add to Cart</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

@@ -1,0 +1,82 @@
+﻿/*Colors
+    #582F0E - Dark brown
+    #7F4F24 
+    #936639
+    #A68A64 - light brown
+    #B6AD90 
+    #C2C5AA
+    #A4AC86 - light green
+    #656D4A
+    #414833
+    #333D29 - dark green
+
+
+*/
+* {
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+#header {
+    height: 25%;
+    background-color: #B6AD90
+}
+
+#nav {
+    height: 10%;
+    background-color: #A68A64;
+}
+
+    #nav ul {
+        list-style-type: none;
+    }
+
+    #nav li {
+        display: inline-block;
+    }
+
+    #nav a {
+        display: block;
+        text-decoration: none;
+        font-size: 1.3em;
+        line-height: 22px;
+        font-weight: 900;
+        padding: 20px;
+        color: #C2C5AA;
+        background-color: #7F4F24;
+        width: 130px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+#content {
+    height: 60%;
+    background-color: #656D4A;
+}
+
+#footer {
+    height: 15%;
+    background-color: #A68A64;
+    color: white;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+#copyright {
+    height: 5%;
+    background-color: #A68A64;
+    color: white;
+    border-top-style: solid;
+}
+#copyright .rightp {
+    float: right;
+}

@@ -1,0 +1,73 @@
+﻿@model Contact
+@{ 
+    ViewData["Title"] = "Contact Us";
+}
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Contact.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#formToggle').click(function () {
+                $('#contactForm').slideToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="contactHeader">
+        <h1>Contact Us</h1>
+    </div>
+    <div id="contactInfo">
+        <table>
+            <tr>
+                <td><p class="contactInfoLabel">Phone Number:</p></td>
+                <td><a href="tel:9795555555">(979)555-5555</a></td>
+            </tr>
+            <tr>
+                <td><p class="contactInfoLabel">Email:</p></td>
+                <td><a href="mailto: JMama@TKGBurgers.com">JMama@TKGBurgers.com</a></td>
+            </tr>
+            <tr>
+                <td><p class="contactInfoLabel">Address:</p></td>
+                <td><p>3310 S College Ave, Bryan, TX 77801</p></td>
+            </tr>
+        </table>
+    </div>
+    <div id="buttonDiv">
+        <button id="formToggle" type="button">Click Here To Get In Touch!</button>
+    </div>
+    <div id="contactForm" style="display:none;">
+        <div id="formTitle">
+            <h2>Customer Form</h2>
+            <p>Fill out this form and a TKG employee will reach out to you as soon as possible!</p>
+        </div>
+        <form asp-action="Contact" method="post">
+            <div id="contactValidation" asp-validation-summary="All">
+                <table id="formTable">
+                    <tr>
+                        <td><input asp-for="FirstNameContact" placeholder="First Name"></td>
+                    </tr>
+                    <tr>
+                        <td><input asp-for="LastNameContact" placeholder="Last Name"></td>
+                    </tr>
+                    <tr>
+                        <td><input asp-for="EmailContact" placeholder="Email"></td>
+                    </tr>
+                    <tr>
+                        <td><input asp-for="PhoneContact" placeholder="Phone Number"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="subject" name="subject" placeholder="Subject"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="message" name="message" placeholder="Message" style="height:175px"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="submitButton">
+                <input type="submit" value="Send Message">
+            </div>
+        </form>
+    </div>
+</body>

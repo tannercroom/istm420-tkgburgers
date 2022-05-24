@@ -1,0 +1,38 @@
+﻿* {
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+hr {
+    width: 25%;
+    margin-left: 0;
+    border: 5px solid #fff;
+    border-radius: 5px;
+}
+
+.lefth {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+
+.leftp {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.photor {
+    width: 15%;
+    float: right;
+    margin-left: 10px;
+    margin-right: 50px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.invisible {
+    clear: both;
+    border: 5px solid #656D4A;
+}

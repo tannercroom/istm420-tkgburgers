@@ -1,0 +1,56 @@
+﻿@model List<CartItem>
+@{
+    ViewData["Title"] = "Cart";
+}
+<head>
+    <title>@ViewData["Title"] - TKG Burgers</title>
+    <link rel="stylesheet" href="~/css/Cart.css" />
+</head>
+<body>
+    <div id="page">
+        <div id="cartTitle">
+            <h1>Cart</h1>
+        </div>
+        <div id="top">
+            <a class="ReturnToMenuButton" asp-controller="Product" asp-action="Order">Return to Menu</a>
+            <a class="CheckoutButton" asp-controller="Product" asp-action="Checkout" asp-route-subtotal="@ViewBag.Subtotal">Checkout</a>
+        </div>
+        <div id="subtotal">
+            <h2>Order Total:</h2>
+            <h2 class="totalsubtotal">@ViewBag.Subtotal.ToString("c2")</h2>
+        </div>
+        <div id="cart">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cartitem in Model)
+                     {
+                        <tr>
+                            <td>@cartitem.CartID</td>
+                            <td><img src="~/images/@cartitem.ProductPhoto" width="200" /> </td>
+                            <td>@cartitem.ProductName</td>
+                            <td>@cartitem.ProductPrice.ToString("c2")</td>
+                            <td>@cartitem.Quantity</td>
+                            <td>@cartitem.Subtotal.ToString("c2")</td>
+                            <td><a class="removeButton" asp-controller="Product" asp-action="Remove" asp-route-id="@cartitem.CartID">Remove</a></td>
+                        </tr>
+                     }
+                </tbody>
+            </table>
+        </div>
+        <div id="bottom">
+            <a class="ReturnToMenuButton" asp-controller="Product" asp-action="Order">Return to Menu</a>
+            <a class="CheckoutButton" asp-controller="Product" asp-action="Checkout" asp-route-subtotal="@ViewBag.Subtotal">Checkout</a>
+        </div>
+    </div>
+</body>

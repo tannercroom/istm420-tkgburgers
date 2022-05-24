@@ -1,0 +1,93 @@
+﻿* {
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.indexphoto1 {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-left: 20%;
+}
+
+.indexphoto2 {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-left: 20%;
+}
+
+.indexphoto3 {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-left: 20%;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+.linkies {
+    font-size: 2em;
+    margin-left: 48%;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+hr {
+    border: 10px solid #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    clear:both;
+}
+
+#AggiePride {
+    width: 50%;
+    word-wrap: break-word;
+    float: left;
+    margin-bottom: 10px;
+}
+
+#Reviews {
+    width: 50%;
+    word-wrap: break-word;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.lefth {
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+.leftp {
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.righth {
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+.wholequote {
+    padding-left: 10px;
+}
+
+.quote {
+    font-size: 25px;
+    color: #363633;
+}
+
+.speaker {
+    font-size: 20px;
+    color: #adadaa;
+}
