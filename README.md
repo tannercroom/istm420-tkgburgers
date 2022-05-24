@@ -42,7 +42,7 @@
   
   <p>First, <a href="https://github.com/tannercroom/istm420-tkgburgers/releases">download the latest release of this project</a>, then extract all files to a single location. In the <i>Team2</i> folder, open the file <i>Team2.sln</i> in a recent version of Microsoft Visual Studio.</p>
 	
-  This web application was created in Microsoft Visual Studio 2019. Any recent version of Microsoft Visual Studio can be used to open and run this application. However, in order for the application to successfully build and have the shopping cart and ordering systems to function properly, the following packages must be installed through the NuGet Package Manager (found in the menu bar under Tools > NuGet Package Manager > Manage NuGet Packages for Solution...):
+  This web application was created in Microsoft Visual Studio 2019. Any recent version of Microsoft Visual Studio can be used to open and run this application. However, in order for the application to successfully build and have the shopping cart and ordering systems function properly, the following packages must be installed through the NuGet Package Manager (found in the menu bar under Tools > NuGet Package Manager > Manage NuGet Packages for Solution...):
   
   <ul>
     <li>Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore v3.1.22</li>
