@@ -29,7 +29,7 @@
     <li>Customer Account/Checkout</li>
   </ul>
 
-  Our group, consisting of myself (Tanner Croom) alongside classmates Katie Hand and Garrett Jones, created a web-application for the fictional restaurant TKG Burgers, located in Bryan, Texas and serving customers across the Bryan-College Station area. TKG Burgers is known for their famous burgers, chicken sandwiches, and chicken tenders, as well as their low prices to entice the significant population of college students that reside in the area.
+  Our group, consisting of myself (Tanner Croom) alongside classmates Katie Hand and Garrett Jones, created a web application for the fictional restaurant TKG Burgers, located in Bryan, Texas and serving customers across the Bryan-College Station area. TKG Burgers is known for their famous burgers, chicken sandwiches, and chicken tenders, as well as their low prices to entice the significant population of college students that reside in the area.
   
   Our web application for TKG Burgers contains a fully-functioning front-end user interface, as well as an included SQL Server back-end system to help manage the shopping cart and ordering systems. Our full project also contains a written report documenting our code.
   
@@ -56,5 +56,5 @@
 	
   <code>Update-Database Product -context ProductContext</code>
   
-  Once this is completed, the user can run the application by clicking the dropdown arrow next to "Start" then selecting "420ProjectTeam2". The application will run in a separate window of the user's default web browser.
+  Once this is completed, the user can run the application by clicking the dropdown arrow next to "Start" then selecting "Team2". The application will run in a separate window of the user's default web browser.
 </div>
